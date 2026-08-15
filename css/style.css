@@ -25,12 +25,19 @@
   display: inline-block; vertical-align: -0.13em;
   flex: none;
 }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* clip (not hidden): kills horizontal panning on mobile without
+     creating a scroll container, so position:sticky keeps working */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 body {
   font-family: 'Nunito', system-ui, sans-serif;
   color: var(--ink);
   background: var(--foam);
   overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.6;
 }
 h1, h2, h3, .logo-text, .price, .speedo-num, .ch-num { font-family: 'Rubik', 'Nunito', sans-serif; }
@@ -313,8 +320,9 @@ a { text-decoration: none; color: inherit; }
 /* ═══════════════════════════════════════════
    THE STORY — scroll-driven slide journey
    ═══════════════════════════════════════════ */
-/* NOTE: no overflow:hidden here — it would break position:sticky in the drop scene */
-.story { position: relative; }
+/* NOTE: overflow-x uses clip, not hidden — hidden would create a scroll
+   container and break position:sticky in the drop scene */
+.story { position: relative; overflow-x: clip; }
 /* Layering: the svg is the story's first positioned child (z-auto), so the
    chapters (positioned, later in DOM) paint above it. Opaque chapter
    backgrounds live on ::before pseudo-elements with z-index:-1, which
@@ -711,6 +719,8 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 960px) {
   .chapter-grid, .drop-inner, .splash-grid { grid-template-columns: 1fr; gap: 40px; }
   .splash-visual { order: 2; }
+  .splash-burst { width: 100%; }
+  .drop-badge { right: 4%; }
   .tower { align-items: stretch; }
   .platform { width: 100%; }
   .cards, .price-cards { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
