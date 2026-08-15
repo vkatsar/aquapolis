@@ -346,8 +346,9 @@
       const speed = Math.round(MAX_SPEED * easeOutCubic(p));
       speedoNum.textContent = speed;
       dropBadge.textContent = Math.round(TOP_ALT * (1 - p)) + 'μ';
-      const callout = p < 0.25 ? 'Κρατήσου σφιχτά…' : p < 0.65 ? 'Πάμεεεεε! 🙌' : p < 0.92 ? 'Στροφή δεξιάαα! 🌀' : 'SPLASH! 💦';
-      if (callout !== lastCallout) { dropCallout.textContent = callout; lastCallout = callout; }
+      const ic = name => ' <svg class="ic" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
+      const callout = p < 0.25 ? 'Κρατήσου σφιχτά…' : p < 0.65 ? 'Πάμεεεεε!' + ic('bolt') : p < 0.92 ? 'Στροφή δεξιάαα!' + ic('swirl') : 'SPLASH!' + ic('splash');
+      if (callout !== lastCallout) { dropCallout.innerHTML = callout; lastCallout = callout; }
       dropHint.style.opacity = p > 0.9 ? 0 : 0.75;
       if (dropBlob && !reduceMotion) {
         dropBlob.style.transform = 'rotate(' + (p * 14 - 7) + 'deg) scale(' + (1 + p * 0.12) + ')';

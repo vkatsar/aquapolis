@@ -18,6 +18,13 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── Inline SVG icons (sprite <use>) ── */
+.ic {
+  width: 1em; height: 1em;
+  display: inline-block; vertical-align: -0.13em;
+  flex: none;
+}
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Nunito', system-ui, sans-serif;
@@ -68,7 +75,10 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; justify-content: space-between;
 }
 .logo { display: flex; align-items: center; gap: 6px; font-size: 1.5rem; }
-.logo-drop { animation: bob 2.6s ease-in-out infinite; display: inline-block; }
+.logo-drop {
+  animation: bob 2.6s ease-in-out infinite;
+  display: inline-flex; color: var(--splash); font-size: 1.25rem;
+}
 @keyframes bob { 50% { transform: translateY(-5px); } }
 .logo-text { font-weight: 900; color: var(--white); letter-spacing: -.02em; transition: color .4s; }
 .logo-text em { font-style: normal; color: var(--splash); }
@@ -190,10 +200,18 @@ a { text-decoration: none; color: inherit; }
 .alt-marker {
   position: absolute; left: 50%; top: 0%;
   transform: translate(-50%, -50%);
-  font-size: 1.3rem; filter: drop-shadow(0 4px 8px rgba(5,42,78,.4));
+  font-size: 1.25rem; color: var(--coral);
+  background: var(--white); border-radius: 50%; padding: 3px;
+  display: inline-flex;
+  filter: drop-shadow(0 4px 8px rgba(5,42,78,.4));
   transition: top .15s linear;
 }
-.alt-base { font-size: .72rem; font-weight: 800; letter-spacing: .08em; color: var(--ocean); text-transform: uppercase; }
+.alt-base {
+  font-size: .72rem; font-weight: 800; letter-spacing: .08em;
+  color: var(--ocean); text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.alt-base .ic { font-size: 1rem; color: var(--aqua); }
 
 /* ── Hero ── */
 .hero {
@@ -512,10 +530,9 @@ a { text-decoration: none; color: inherit; }
 .checklist { list-style: none; margin: 22px 0 30px; }
 .checklist li { padding-left: 34px; position: relative; margin-bottom: 12px; font-weight: 700; color: #35516d; }
 .checklist li::before {
-  content: '✓'; position: absolute; left: 0; top: 0;
+  content: ''; position: absolute; left: 0; top: 0;
   width: 24px; height: 24px; border-radius: 50%;
-  background: var(--lime); color: var(--deep);
-  display: grid; place-items: center; font-size: .8rem; font-weight: 900;
+  background: var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23052a4e' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 13px no-repeat;
 }
 
 /* ── CH05: wave ── */
@@ -554,9 +571,10 @@ a { text-decoration: none; color: inherit; }
 .play-btn {
   width: 34px; height: 34px; border-radius: 50%; flex: none;
   background: var(--sun); color: var(--deep);
-  display: grid; place-items: center; font-size: .75rem;
+  display: grid; place-items: center;
   transition: transform .3s var(--ease);
 }
+.play-btn .ic { width: 15px; height: 15px; }
 .gallery-item:hover .play-btn { transform: scale(1.18); }
 .gallery-video::after {
   content: ''; position: absolute; inset: 0;
@@ -609,7 +627,7 @@ a { text-decoration: none; color: inherit; }
   transition: transform .35s var(--ease);
 }
 .info-block:hover { transform: translateY(-6px); }
-.info-icon { font-size: 2.4rem; display: block; margin-bottom: 12px; }
+.info-icon { font-size: 2.6rem; display: block; margin-bottom: 12px; color: var(--aqua); }
 .info-block h3 { font-size: 1.1rem; font-weight: 800; color: var(--deep); margin-bottom: 8px; }
 .info-block p { color: #4a6480; font-size: .95rem; }
 
@@ -642,8 +660,9 @@ a { text-decoration: none; color: inherit; }
 .socials a {
   width: 42px; height: 42px; border-radius: 50%;
   background: rgba(255, 255, 255, .1); display: grid; place-items: center;
-  font-size: 1.1rem; transition: all .3s var(--ease);
+  transition: all .3s var(--ease);
 }
+.socials .ic { width: 18px; height: 18px; }
 .socials a:hover { background: var(--splash); color: var(--deep); transform: translateY(-4px); }
 .footer-bottom {
   text-align: center; padding: 22px 0;
@@ -671,9 +690,11 @@ a { text-decoration: none; color: inherit; }
   position: absolute; top: 24px; right: 28px;
   width: 48px; height: 48px; border-radius: 50%;
   background: rgba(255, 255, 255, .12); color: var(--white);
-  border: none; font-size: 1.2rem; cursor: pointer;
+  border: none; cursor: pointer;
+  display: grid; place-items: center;
   transition: all .3s;
 }
+.lightbox-close .ic { width: 20px; height: 20px; }
 .lightbox-close:hover { background: var(--coral); transform: rotate(90deg); }
 
 /* ── Reveal animations ── */

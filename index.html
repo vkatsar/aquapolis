@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,800;0,900;1,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2312b3d6' d='M12 2.5C12 2.5 5.5 10 5.5 14.5a6.5 6.5 0 0 0 13 0C18.5 10 12 2.5 12 2.5Z'/%3E%3C/svg%3E">
 <meta property="og:title" content="Aquapolis Athens — Η Διαδρομή Ξεκινά στα 22 Μέτρα">
 <meta property="og:description" content="Κάνε scroll και ζήσε ολόκληρη τη διαδρομή: πύργος, πτώση, splash και κύμα. Το μεγαλύτερο water park της Αττικής.">
 <meta property="og:type" content="website">
@@ -17,6 +17,37 @@
 <meta name="theme-color" content="#052a4e">
 </head>
 <body>
+
+<!-- ══════════ ICON SPRITE ══════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5C12 2.5 5.5 10 5.5 14.5a6.5 6.5 0 0 0 13 0C18.5 10 12 2.5 12 2.5Z"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9q2.5-4 5 0t5 0t5 0t5 0"/><path d="M2 15q2.5-4 5 0t5 0t5 0t5 0"/></g></symbol>
+    <symbol id="i-snake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 18c0-4 6-4 9-4s6-1.5 6-4.5S16.5 5 14.5 5 11 6.5 11 8.5"/><circle cx="11" cy="9" r="0.4" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-castle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V8h2V5h2.5v3h5V5H17v3h2v13"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M3 21h18"/></g></symbol>
+    <symbol id="i-flagcheck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h13v9H5"/><path fill="currentColor" stroke="none" d="M8 6h3v2H8zM13 6h3v2h-3zM10.5 9h3v2h-3z"/></g></symbol>
+    <symbol id="i-lifebuoy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.8"/><path stroke-linecap="round" d="M5.7 5.7 9.3 9.3M18.3 5.7l-3.6 3.6M5.7 18.3l3.6-3.6M18.3 18.3l-3.6-3.6"/></g></symbol>
+    <symbol id="i-cocktail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-8 9-8-9Z"/><path d="M12 13v6M8 19h8M7.5 8h9"/></g></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V3.5"/><path d="M6 4l12 3.2L6 10.5Z"/></g></symbol>
+    <symbol id="i-swirl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M20.5 12A8.5 8.5 0 1 0 12 20.5a6.5 6.5 0 0 0 6.5-6.5A4.8 4.8 0 0 0 13.7 9.2a3.4 3.4 0 0 0-3.4 3.4 2.3 2.3 0 0 0 2.3 2.3"/></symbol>
+    <symbol id="i-rainbow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17a9 9 0 0 1 18 0"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M10.6 17a1.4 1.4 0 0 1 2.8 0"/></g></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 4.5 13.5H10l-1 8.5L17.5 10H12l1-8Z"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5 16.5 3 21 7.5 7.5 21 3 16.5Z"/><path d="M7.5 12.5l1.8 1.8M10.5 9.5l1.8 1.8M13.5 6.5l1.8 1.8"/></g></symbol>
+    <symbol id="i-family" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5S5 15.6 5 10.5a7 7 0 0 1 14 0c0 5.1-7 11-7 11Z"/><circle cx="12" cy="10.5" r="2.5"/></g></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-4l2-5h11l3 5h2v4h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5"/></g></symbol>
+    <symbol id="i-burger" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a8 4.5 0 0 1 16 0Z"/><path d="M4 13h16"/><path d="M4 16h16v1.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5Z"/></g></symbol>
+    <symbol id="i-fire" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 2.5c.4 2.6-.7 4.3-2.2 5.9C9.6 10.2 8 11.9 8 14.5a4.5 4.5 0 0 0 9 0c0-2-1-3.4-2-4.6-.3 1.2-1 1.9-1.9 2.1.8-2 .3-4.2-1.1-6.1-.4-.6-.7-1.6 1.5-3.4Z"/><path fill="currentColor" d="M10.2 4.6C8 6.8 5.5 9.6 5.5 13.8c0 1 .2 1.9.5 2.7-1.2-.9-2-2.3-2-4.1 0-3.4 3.2-5.9 6.2-7.8Z" opacity=".55"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l10.5-6.5L8 5.5Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-chevdown" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 9 7 7 7-7"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 8.5V7c0-.8.5-1.3 1.4-1.3h1.6V2.2L15.9 2c-2.8 0-4.3 1.8-4.3 4.5v2H9.2v3.4h2.4V22h3.9V11.9h2.7l.5-3.4h-3.2Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M14.5 2h3.2c.3 2 1.6 3.5 3.8 3.8v3.2c-1.4 0-2.7-.4-3.8-1.2v7.7a6.3 6.3 0 1 1-6.3-6.3c.3 0 .7 0 1 .1v3.4a3 3 0 1 0 2.1 2.8V2Z"/></symbol>
+    <symbol id="i-splash" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 2.5S9 6.4 9 8.5a3 3 0 0 0 6 0C15 6.4 12 2.5 12 2.5Z"/><path d="M5.5 12s-2 2.6-2 4a2 2 0 0 0 4 0c0-1.4-2-4-2-4Z"/><path d="M18.5 12s-2 2.6-2 4a2 2 0 0 0 4 0c0-1.4-2-4-2-4Z"/></g></symbol>
+  </defs>
+</svg>
 
 <!-- ══════════ PRELOADER ══════════ -->
 <div class="preloader" id="preloader">
@@ -32,7 +63,7 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="logo" aria-label="Aquapolis Athens">
-      <span class="logo-drop">💧</span>
+      <span class="logo-drop"><svg class="ic" aria-hidden="true"><use href="#i-drop"/></svg></span>
       <span class="logo-text">aqua<em>polis</em></span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -66,9 +97,9 @@
   <span class="alt-value" id="altValue">22μ</span>
   <div class="alt-track">
     <div class="alt-fill" id="altFill"></div>
-    <span class="alt-marker" id="altMarker">🛟</span>
+    <span class="alt-marker" id="altMarker"><svg class="ic" aria-hidden="true"><use href="#i-lifebuoy"/></svg></span>
   </div>
-  <span class="alt-base">splash 💦</span>
+  <span class="alt-base">splash <svg class="ic" aria-hidden="true"><use href="#i-splash"/></svg></span>
 </div>
 
 <!-- ══════════ HERO ══════════ -->
@@ -86,7 +117,7 @@
   <div class="bubbles" aria-hidden="true" id="bubbles"></div>
 
   <div class="hero-content">
-    <p class="hero-kicker reveal">🌊 Δυτική Αττική · Μια ιστορία σε 5 κεφάλαια</p>
+    <p class="hero-kicker reveal"><svg class="ic" aria-hidden="true"><use href="#i-wave"/></svg> Δυτική Αττική · Μια ιστορία σε 5 κεφάλαια</p>
     <h1 class="hero-title">
       <span class="line"><span data-splash>Η ιστορία</span></span>
       <span class="line"><span data-splash>ξεκινά στα</span></span>
@@ -94,7 +125,7 @@
     </h1>
     <p class="hero-sub reveal">Κάνε scroll και ζήσε ολόκληρη τη διαδρομή — από την κορυφή του πύργου, μέσα από στροφές και πτώσεις, μέχρι το τελικό splash.</p>
     <div class="hero-cta reveal">
-      <a href="#ch-climb" class="btn btn-primary">Ξεκίνα τη Διαδρομή <span class="btn-arrow">↓</span></a>
+      <a href="#ch-climb" class="btn btn-primary">Ξεκίνα τη Διαδρομή <svg class="ic" aria-hidden="true"><use href="#i-chevdown"/></svg></a>
       <a href="#tickets" class="btn btn-ghost">Πάρε Εισιτήριο</a>
     </div>
   </div>
@@ -113,8 +144,8 @@
 <!-- ══════════ MARQUEE ══════════ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Extreme Slides 🐍</span><span>Wave Pool 🌊</span><span>Kids Aqua Tower 🏰</span><span>Racing Slides 🏁</span><span>Lazy River 🛟</span><span>Beach Bar 🍹</span>
-    <span>Extreme Slides 🐍</span><span>Wave Pool 🌊</span><span>Kids Aqua Tower 🏰</span><span>Racing Slides 🏁</span><span>Lazy River 🛟</span><span>Beach Bar 🍹</span>
+    <span>Extreme Slides <svg class="ic"><use href="#i-snake"/></svg></span><span>Wave Pool <svg class="ic"><use href="#i-wave"/></svg></span><span>Kids Aqua Tower <svg class="ic"><use href="#i-castle"/></svg></span><span>Racing Slides <svg class="ic"><use href="#i-flagcheck"/></svg></span><span>Lazy River <svg class="ic"><use href="#i-lifebuoy"/></svg></span><span>Beach Bar <svg class="ic"><use href="#i-cocktail"/></svg></span>
+    <span>Extreme Slides <svg class="ic"><use href="#i-snake"/></svg></span><span>Wave Pool <svg class="ic"><use href="#i-wave"/></svg></span><span>Kids Aqua Tower <svg class="ic"><use href="#i-castle"/></svg></span><span>Racing Slides <svg class="ic"><use href="#i-flagcheck"/></svg></span><span>Lazy River <svg class="ic"><use href="#i-lifebuoy"/></svg></span><span>Beach Bar <svg class="ic"><use href="#i-cocktail"/></svg></span>
   </div>
 </div>
 
@@ -140,12 +171,12 @@
         </div>
       </div>
       <div class="tower reveal" id="tower" aria-hidden="true">
-        <div class="tower-flag">ΕΔΩ ΞΕΚΙΝΑΣ 🚩</div>
-        <div class="platform" data-alt="22μ"><b>22μ</b> Extreme Zone 🐍</div>
-        <div class="platform" data-alt="18μ"><b>18μ</b> Thrill Zone 🏁</div>
-        <div class="platform" data-alt="12μ"><b>12μ</b> Racing Lanes 🌀</div>
-        <div class="platform" data-alt="8μ"><b>8μ</b> Family Slides 🌈</div>
-        <div class="platform" data-alt="4μ"><b>4μ</b> Kids Tower 🏰</div>
+        <div class="tower-flag">ΕΔΩ ΞΕΚΙΝΑΣ <svg class="ic"><use href="#i-flag"/></svg></div>
+        <div class="platform" data-alt="22μ"><b>22μ</b> Extreme Zone <svg class="ic"><use href="#i-snake"/></svg></div>
+        <div class="platform" data-alt="18μ"><b>18μ</b> Thrill Zone <svg class="ic"><use href="#i-flagcheck"/></svg></div>
+        <div class="platform" data-alt="12μ"><b>12μ</b> Racing Lanes <svg class="ic"><use href="#i-swirl"/></svg></div>
+        <div class="platform" data-alt="8μ"><b>8μ</b> Family Slides <svg class="ic"><use href="#i-rainbow"/></svg></div>
+        <div class="platform" data-alt="4μ"><b>4μ</b> Kids Tower <svg class="ic"><use href="#i-castle"/></svg></div>
       </div>
     </div>
   </section>
@@ -165,7 +196,7 @@
             <span class="speedo-num" id="speedoNum">0</span>
             <span class="speedo-unit">km/h</span>
           </div>
-          <p class="drop-hint" id="dropHint">▼ συνέχισε το scroll — παίρνεις ταχύτητα</p>
+          <p class="drop-hint" id="dropHint"><svg class="ic" aria-hidden="true"><use href="#i-chevdown"/></svg> συνέχισε το scroll — παίρνεις ταχύτητα</p>
         </div>
         <div class="drop-visual" id="dropVisual">
           <div class="drop-blob">
@@ -193,9 +224,9 @@
             <span class="card-badge badge-extreme">Extreme</span>
           </div>
           <div class="card-body">
-            <h3>Anaconda 🐍</h3>
+            <h3>Anaconda <svg class="ic" aria-hidden="true"><use href="#i-snake"/></svg></h3>
             <p>Το «φίδι» του Aquapolis: κλειστό tube με στροφές που δεν βλέπεις να έρχονται. Μόνο για τολμηρούς.</p>
-            <div class="card-meta"><span>⚡ 45 km/h</span><span>📏 1.20μ+</span></div>
+            <div class="card-meta"><span><svg class="ic"><use href="#i-bolt"/></svg> 45 km/h</span><span><svg class="ic"><use href="#i-ruler"/></svg> 1.20μ+</span></div>
           </div>
         </article>
         <article class="card reveal" data-tilt style="--d:.12s">
@@ -204,9 +235,9 @@
             <span class="card-badge badge-thrill">Thrill</span>
           </div>
           <div class="card-body">
-            <h3>Turbo Racers 🏁</h3>
+            <h3>Turbo Racers <svg class="ic" aria-hidden="true"><use href="#i-flagcheck"/></svg></h3>
             <p>Κάψουλες εκτόξευσης δίπλα-δίπλα. Εσύ κι οι φίλοι σου — ποιος θα τερματίσει πρώτος;</p>
-            <div class="card-meta"><span>🏁 4 διάδρομοι</span><span>📏 1.20μ+</span></div>
+            <div class="card-meta"><span><svg class="ic"><use href="#i-flagcheck"/></svg> 4 διάδρομοι</span><span><svg class="ic"><use href="#i-ruler"/></svg> 1.20μ+</span></div>
           </div>
         </article>
         <article class="card reveal" data-tilt style="--d:.24s">
@@ -215,9 +246,9 @@
             <span class="card-badge badge-family">Family</span>
           </div>
           <div class="card-body">
-            <h3>Rainbow Bay 🌈</h3>
+            <h3>Rainbow Bay <svg class="ic" aria-hidden="true"><use href="#i-rainbow"/></svg></h3>
             <p>Πολύχρωμες διαδρομές για όλη την παρέα, με ήπιες στροφές και προσγείωση σε κρυστάλλινη πισίνα.</p>
-            <div class="card-meta"><span>👨‍👩‍👧 Για όλους</span><span>📏 0.90μ+</span></div>
+            <div class="card-meta"><span><svg class="ic"><use href="#i-family"/></svg> Για όλους</span><span><svg class="ic"><use href="#i-ruler"/></svg> 0.90μ+</span></div>
           </div>
         </article>
       </div>
@@ -284,15 +315,15 @@
       <div class="gallery-grid">
         <figure class="gallery-item gallery-video reveal" data-lightbox="video" data-src="assets/video/hero-1.mp4">
           <img src="assets/img/hero-poster.jpg" alt="Βίντεο: θέα από την κορυφή των τσουληθρών" loading="lazy">
-          <figcaption><span class="play-btn">▶</span> Πάνω από το πάρκο</figcaption>
+          <figcaption><span class="play-btn"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span> Πάνω από το πάρκο</figcaption>
         </figure>
         <figure class="gallery-item gallery-video reveal" data-lightbox="video" data-src="assets/video/hero-2.mp4" style="--d:.1s">
           <img src="assets/img/snake-slide.jpg" alt="Βίντεο: η τσουλήθρα Anaconda από κάτω" loading="lazy">
-          <figcaption><span class="play-btn">▶</span> Κάτω από την Anaconda</figcaption>
+          <figcaption><span class="play-btn"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span> Κάτω από την Anaconda</figcaption>
         </figure>
         <figure class="gallery-item gallery-video reveal" data-lightbox="video" data-src="assets/video/gallery-3.mp4" style="--d:.2s">
           <img src="assets/img/racing-top.jpg" alt="Βίντεο: πλατφόρμα εκκίνησης" loading="lazy">
-          <figcaption><span class="play-btn">▶</span> Στην εκκίνηση</figcaption>
+          <figcaption><span class="play-btn"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span> Στην εκκίνηση</figcaption>
         </figure>
         <figure class="gallery-item reveal" data-lightbox="image" data-src="assets/img/park-overview.jpg" style="--d:.15s">
           <img src="assets/img/park-overview.jpg" alt="Πανοραμική άποψη του παιδικού κόσμου" loading="lazy">
@@ -327,7 +358,7 @@
         <a href="#info" class="btn btn-ghost-dark">Επιλογή</a>
       </div>
       <div class="price-card featured reveal" data-tilt style="--d:.12s">
-        <span class="price-flag">Δημοφιλές 🔥</span>
+        <span class="price-flag">Δημοφιλές <svg class="ic" aria-hidden="true"><use href="#i-fire"/></svg></span>
         <h3>Ενηλίκων</h3>
         <p class="price"><span class="price-num" data-count="18">0</span>€</p>
         <p class="price-note">Ολοήμερη πρόσβαση</p>
@@ -349,22 +380,22 @@
 <section class="section info" id="info">
   <div class="container info-grid">
     <div class="info-block reveal">
-      <span class="info-icon">🕘</span>
+      <span class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>
       <h3>Ώρες Λειτουργίας</h3>
       <p>Καθημερινά <strong>10:00 – 19:00</strong><br>Μάιος – Σεπτέμβριος</p>
     </div>
     <div class="info-block reveal" style="--d:.1s">
-      <span class="info-icon">📍</span>
+      <span class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span>
       <h3>Τοποθεσία</h3>
       <p>Δυτική Αττική<br><strong>20′ από το κέντρο της Αθήνας</strong></p>
     </div>
     <div class="info-block reveal" style="--d:.2s">
-      <span class="info-icon">🚗</span>
+      <span class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg></span>
       <h3>Πρόσβαση</h3>
       <p>Δωρεάν parking<br><strong>1.000+ θέσεις</strong></p>
     </div>
     <div class="info-block reveal" style="--d:.3s">
-      <span class="info-icon">🍔</span>
+      <span class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-burger"/></svg></span>
       <h3>Φαγητό &amp; Ποτό</h3>
       <p>Beach bar, εστιατόριο<br><strong>&amp; snack corners</strong></p>
     </div>
@@ -387,7 +418,7 @@
   </svg>
   <div class="container footer-grid">
     <div>
-      <a href="#top" class="logo footer-logo"><span class="logo-drop">💧</span><span class="logo-text">aqua<em>polis</em></span></a>
+      <a href="#top" class="logo footer-logo"><span class="logo-drop"><svg class="ic" aria-hidden="true"><use href="#i-drop"/></svg></span><span class="logo-text">aqua<em>polis</em></span></a>
       <p class="footer-tag">Το μεγαλύτερο water park της Αττικής.</p>
     </div>
     <nav class="footer-nav">
@@ -400,9 +431,9 @@
       <p>info@aquapolis.gr</p>
       <p>+30 210 000 0000</p>
       <div class="socials">
-        <a href="#" aria-label="Facebook">ⓕ</a>
-        <a href="#" aria-label="Instagram">◉</a>
-        <a href="#" aria-label="TikTok">♪</a>
+        <a href="#" aria-label="Facebook"><svg class="ic" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg class="ic" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
       </div>
     </div>
   </div>
@@ -411,7 +442,7 @@
 
 <!-- ══════════ LIGHTBOX ══════════ -->
 <div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Κλείσιμο">✕</button>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Κλείσιμο"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
   <div class="lightbox-content" id="lightboxContent"></div>
 </div>
 
