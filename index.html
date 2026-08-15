@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,800;0,900;1,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+<meta property="og:title" content="Aquapolis Athens — Η Διαδρομή Ξεκινά στα 22 Μέτρα">
+<meta property="og:description" content="Κάνε scroll και ζήσε ολόκληρη τη διαδρομή: πύργος, πτώση, splash και κύμα. Το μεγαλύτερο water park της Αττικής.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/hero-poster.jpg">
+<meta name="theme-color" content="#052a4e">
 </head>
 <body>
 
@@ -43,6 +48,18 @@
     </button>
   </div>
 </header>
+
+<!-- ══════════ SCROLL PROGRESS (water bar) ══════════ -->
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- ══════════ CHAPTER DOTS NAV ══════════ -->
+<nav class="chapter-nav" id="chapterNav" aria-label="Κεφάλαια">
+  <a href="#ch-climb" data-ch="ch-climb"><i></i><span>Ο Πύργος</span></a>
+  <a href="#ch-drop" data-ch="ch-drop"><i></i><span>Η Πτώση</span></a>
+  <a href="#ch-slides" data-ch="ch-slides"><i></i><span>Οι Διαδρομές</span></a>
+  <a href="#ch-splash" data-ch="ch-splash"><i></i><span>Το Splash</span></a>
+  <a href="#ch-wave" data-ch="ch-wave"><i></i><span>Το Κύμα</span></a>
+</nav>
 
 <!-- ══════════ ALTITUDE METER (fixed, scroll-driven) ══════════ -->
 <div class="alt-meter" id="altMeter" aria-hidden="true">

@@ -242,6 +242,11 @@
 
   const TOP_ALT = 22, MAX_SPEED = 45;
   let lastCallout = '';
+  const progressBar = document.getElementById('scrollProgressBar');
+  const chapterNav = document.getElementById('chapterNav');
+  const chapterNavLinks = chapterNav ? Array.from(chapterNav.querySelectorAll('a')) : [];
+  const navMenuLinks = Array.from(document.querySelectorAll('#navLinks a:not(.btn)'));
+  const chapterEls = chapterNavLinks.map(a => document.getElementById(a.dataset.ch));
 
   function update() {
     const vh = window.innerHeight;
@@ -287,9 +292,33 @@
       }
     }
 
+    /* top water progress bar */
+    if (progressBar) {
+      const docP = clamp(scrollY / (document.documentElement.scrollHeight - vh), 0, 1);
+      progressBar.style.width = docP * 100 + '%';
+    }
+
+    /* chapter dots + nav menu active states */
+    const mid = scrollY + vh * 0.5;
+    let activeCh = -1;
+    chapterEls.forEach((el, i) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + scrollY;
+      if (mid >= top) activeCh = i;
+    });
+    chapterNavLinks.forEach((a, i) => a.classList.toggle('active', i === activeCh));
+    navMenuLinks.forEach(a => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      const top = target.getBoundingClientRect().top + scrollY;
+      const bottom = top + target.offsetHeight;
+      a.classList.toggle('active', mid >= top && mid < bottom);
+    });
+
     /* altitude HUD */
     const inStory = scrollY + vh * 0.5 > storyTop && scrollY + vh * 0.5 < storyTop + storyH;
     altMeter.classList.toggle('on', inStory);
+    if (chapterNav) chapterNav.classList.toggle('on', inStory);
     if (inStory) {
       const alt = Math.round(TOP_ALT * (1 - sp));
       altValue.textContent = alt + 'μ';
