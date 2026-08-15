@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquapolis Athens — Το Μεγαλύτερο Water Park της Αττικής</title>
+<meta name="description" content="Aquapolis Athens: Νεροτσουλήθρες, wave pool, παιδικός κόσμος και ατελείωτη διασκέδαση στη Δυτική Αττική. Ζήσε την απόλυτη εμπειρία νερού!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,800;0,900;1,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-wave">
+      <svg viewBox="0 0 120 60"><path d="M0 30 Q15 10 30 30 T60 30 T90 30 T120 30" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>
+    </div>
+    <span class="preloader-text">AQUAPOLIS</span>
+  </div>
+</div>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="Aquapolis Athens">
+      <span class="logo-drop">💧</span>
+      <span class="logo-text">aqua<em>polis</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#attractions">Νεροτσουλήθρες</a>
+      <a href="#kids">Παιδικός Κόσμος</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#tickets">Εισιτήρια</a>
+      <a href="#info">Πληροφορίες</a>
+      <a href="#tickets" class="btn btn-nav">Κλείσε Θέση <span class="btn-arrow">→</span></a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Μενού" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <video class="hero-video is-active" autoplay muted loop playsinline poster="assets/img/hero-poster.jpg" data-hero-video>
+      <source src="assets/video/hero-1.mp4" type="video/mp4">
+    </video>
+    <video class="hero-video" muted loop playsinline preload="auto" data-hero-video>
+      <source src="assets/video/hero-2.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="bubbles" aria-hidden="true" id="bubbles"></div>
+
+  <div class="hero-content">
+    <p class="hero-kicker reveal">🌊 Δυτική Αττική · Άνοιξε το 2025</p>
+    <h1 class="hero-title">
+      <span class="line"><span data-splash>Βουτιά</span></span>
+      <span class="line"><span data-splash>στην <em>απόλυτη</em></span></span>
+      <span class="line"><span data-splash>διασκέδαση!</span></span>
+    </h1>
+    <p class="hero-sub reveal">Το μεγαλύτερο water park της Αττικής σε περιμένει με extreme νεροτσουλήθρες, wave pool και ατελείωτο καλοκαίρι.</p>
+    <div class="hero-cta reveal">
+      <a href="#tickets" class="btn btn-primary">Πάρε Εισιτήριο <span class="btn-arrow">→</span></a>
+      <a href="#attractions" class="btn btn-ghost">Δες τις Τσουλήθρες</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-mouse"></div>
+    <span>Scroll</span>
+  </div>
+
+  <svg class="wave-divider wave-hero" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <path class="wave-a" d="M0,60 C240,110 480,10 720,55 C960,100 1200,20 1440,60 L1440,110 L0,110 Z"/>
+    <path class="wave-b" d="M0,80 C260,30 520,105 780,70 C1040,35 1240,95 1440,75 L1440,110 L0,110 Z"/>
+  </svg>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Extreme Slides 🐍</span><span>Wave Pool 🌊</span><span>Kids Aqua Tower 🏰</span><span>Racing Slides 🏁</span><span>Lazy River 🛟</span><span>Beach Bar 🍹</span>
+    <span>Extreme Slides 🐍</span><span>Wave Pool 🌊</span><span>Kids Aqua Tower 🏰</span><span>Racing Slides 🏁</span><span>Lazy River 🛟</span><span>Beach Bar 🍹</span>
+  </div>
+</div>
+
+<!-- ══════════ STATS ══════════ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal">
+      <span class="stat-num" data-count="20" data-suffix="+">0</span>
+      <span class="stat-label">Νεροτσουλήθρες</span>
+    </div>
+    <div class="stat reveal" style="--d:.1s">
+      <span class="stat-num" data-count="50" data-suffix="κ+ τ.μ.">0</span>
+      <span class="stat-label">Έκταση πάρκου</span>
+    </div>
+    <div class="stat reveal" style="--d:.2s">
+      <span class="stat-num" data-count="7" data-suffix="">0</span>
+      <span class="stat-label">Πισίνες</span>
+    </div>
+    <div class="stat reveal" style="--d:.3s">
+      <span class="stat-num" data-count="100" data-suffix="%">0</span>
+      <span class="stat-label">Καλοκαιρινή διάθεση</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ATTRACTIONS ══════════ -->
+<section class="section attractions" id="attractions">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Adrenaline Zone</p>
+      <h2>Νεροτσουλήθρες που <em>κόβουν</em> την ανάσα</h2>
+      <p class="section-sub">Από kamikaze πτώσεις μέχρι οικογενειακές διαδρομές — διάλεξε το επίπεδο αδρεναλίνης σου.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal" data-tilt>
+        <div class="card-media">
+          <img src="assets/img/snake-slide.jpg" alt="Η νεροτσουλήθρα Anaconda με μοτίβο φιδιού" loading="lazy">
+          <span class="card-badge badge-extreme">Extreme</span>
+        </div>
+        <div class="card-body">
+          <h3>Anaconda 🐍</h3>
+          <p>Το «φίδι» του Aquapolis: κλειστό tube με στροφές που δεν βλέπεις να έρχονται. Μόνο για τολμηρούς.</p>
+          <div class="card-meta"><span>⚡ Ταχύτητα: 45 km/h</span><span>📏 Ύψος: 1.20μ+</span></div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tilt style="--d:.12s">
+        <div class="card-media">
+          <img src="assets/img/racing-top.jpg" alt="Πλατφόρμα εκκίνησης racing slides" loading="lazy">
+          <span class="card-badge badge-thrill">Thrill</span>
+        </div>
+        <div class="card-body">
+          <h3>Turbo Racers 🏁</h3>
+          <p>Κάψουλες εκτόξευσης δίπλα-δίπλα. Εσύ κι οι φίλοι σου — ποιος θα τερματίσει πρώτος;</p>
+          <div class="card-meta"><span>🏁 4 διάδρομοι</span><span>📏 Ύψος: 1.20μ+</span></div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tilt style="--d:.24s">
+        <div class="card-media">
+          <img src="assets/img/slides-pool.jpg" alt="Πολύχρωμες νεροτσουλήθρες πάνω από πισίνα" loading="lazy">
+          <span class="card-badge badge-family">Family</span>
+        </div>
+        <div class="card-body">
+          <h3>Rainbow Bay 🌈</h3>
+          <p>Πολύχρωμες διαδρομές για όλη την παρέα, με ήπιες στροφές και προσγείωση σε κρυστάλλινη πισίνα.</p>
+          <div class="card-meta"><span>👨‍👩‍👧 Για όλους</span><span>📏 Ύψος: 0.90μ+</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PARALLAX / KIDS ══════════ -->
+<section class="parallax" id="kids">
+  <div class="parallax-bg" data-parallax style="background-image:url('assets/img/park-overview.jpg')"></div>
+  <div class="parallax-overlay"></div>
+  <div class="container parallax-content">
+    <div class="parallax-card reveal">
+      <p class="eyebrow light">Kids Aqua Tower</p>
+      <h2>Ο παιδικός κόσμος<br>του <em>Aquapolis</em></h2>
+      <p>Διώροφος πύργος παιχνιδιού με mini τσουλήθρες, πειρατικό καράβι, γιγάντιο κουβά που αδειάζει 500 λίτρα νερό και ρηχές πισίνες — όλα σχεδιασμένα για ασφαλές παιχνίδι, με ναυαγοσώστες παντού.</p>
+      <ul class="checklist">
+        <li>Ρηχές πισίνες 0–60εκ.</li>
+        <li>Πιστοποιημένοι ναυαγοσώστες σε κάθε ζώνη</li>
+        <li>Σκιερά καθιστικά για γονείς δίπλα στο νερό</li>
+      </ul>
+      <a href="#tickets" class="btn btn-primary">Οικογενειακό Πακέτο <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+  <svg class="wave-divider wave-flip" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <path class="wave-a" d="M0,60 C240,110 480,10 720,55 C960,100 1200,20 1440,60 L1440,110 L0,110 Z"/>
+  </svg>
+</section>
+
+<!-- ══════════ GALLERY ══════════ -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Μια γεύση από ψηλά</p>
+      <h2>Ζήσε το <em>πριν</em> έρθεις</h2>
+      <p class="section-sub">Πλάνα μέσα από το πάρκο — πάτησε play και νιώσε τον παλμό.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item gallery-video reveal" data-lightbox="video" data-src="assets/video/hero-1.mp4">
+        <img src="assets/img/hero-poster.jpg" alt="Βίντεο: θέα από την κορυφή των τσουληθρών" loading="lazy">
+        <figcaption><span class="play-btn">▶</span> Πάνω από το πάρκο</figcaption>
+      </figure>
+      <figure class="gallery-item gallery-video reveal" data-lightbox="video" data-src="assets/video/hero-2.mp4" style="--d:.1s">
+        <img src="assets/img/snake-slide.jpg" alt="Βίντεο: η τσουλήθρα Anaconda από κάτω" loading="lazy">
+        <figcaption><span class="play-btn">▶</span> Κάτω από την Anaconda</figcaption>
+      </figure>
+      <figure class="gallery-item gallery-video reveal" data-lightbox="video" data-src="assets/video/gallery-3.mp4" style="--d:.2s">
+        <img src="assets/img/racing-top.jpg" alt="Βίντεο: πλατφόρμα εκκίνησης" loading="lazy">
+        <figcaption><span class="play-btn">▶</span> Στην εκκίνηση</figcaption>
+      </figure>
+      <figure class="gallery-item reveal" data-lightbox="image" data-src="assets/img/park-overview.jpg" style="--d:.15s">
+        <img src="assets/img/park-overview.jpg" alt="Πανοραμική άποψη του παιδικού κόσμου" loading="lazy">
+        <figcaption>Kids Aqua Tower</figcaption>
+      </figure>
+      <figure class="gallery-item reveal" data-lightbox="image" data-src="assets/img/slides-pool.jpg" style="--d:.25s">
+        <img src="assets/img/slides-pool.jpg" alt="Νεροτσουλήθρες και πισίνα τερματισμού" loading="lazy">
+        <figcaption>Ζώνη τερματισμού</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TICKETS ══════════ -->
+<section class="section tickets" id="tickets">
+  <svg class="wave-divider wave-top" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <path class="wave-a" d="M0,60 C240,110 480,10 720,55 C960,100 1200,20 1440,60 L1440,110 L0,110 Z"/>
+  </svg>
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow light">Εισιτήρια</p>
+      <h2 class="light-title">Διάλεξε το <em>πάσο</em> σου</h2>
+      <p class="section-sub light-sub">Ενδεικτικές τιμές — κλείσε online και γλίτωσε την ουρά στα ταμεία.</p>
+    </div>
+
+    <div class="price-cards">
+      <div class="price-card reveal" data-tilt>
+        <h3>Παιδικό</h3>
+        <p class="price"><span class="price-num" data-count="12">0</span>€</p>
+        <p class="price-note">Ηλικίες 4–12 ετών</p>
+        <ul><li>Όλες οι παιδικές ζώνες</li><li>Family slides</li><li>Δωρεάν έως 3 ετών</li></ul>
+        <a href="#info" class="btn btn-ghost-dark">Επιλογή</a>
+      </div>
+      <div class="price-card featured reveal" data-tilt style="--d:.12s">
+        <span class="price-flag">Δημοφιλές 🔥</span>
+        <h3>Ενηλίκων</h3>
+        <p class="price"><span class="price-num" data-count="18">0</span>€</p>
+        <p class="price-note">Ολοήμερη πρόσβαση</p>
+        <ul><li>Όλες οι νεροτσουλήθρες</li><li>Wave pool &amp; lazy river</li><li>Ξαπλώστρα &amp; ομπρέλα</li></ul>
+        <a href="#info" class="btn btn-primary">Επιλογή <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="price-card reveal" data-tilt style="--d:.24s">
+        <h3>Οικογενειακό</h3>
+        <p class="price"><span class="price-num" data-count="49">0</span>€</p>
+        <p class="price-note">2 ενήλικες + 2 παιδιά</p>
+        <ul><li>Όλο το πάρκο</li><li>Προτεραιότητα εισόδου</li><li>Έκπτωση στο beach bar</li></ul>
+        <a href="#info" class="btn btn-ghost-dark">Επιλογή</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INFO ══════════ -->
+<section class="section info" id="info">
+  <div class="container info-grid">
+    <div class="info-block reveal">
+      <span class="info-icon">🕘</span>
+      <h3>Ώρες Λειτουργίας</h3>
+      <p>Καθημερινά <strong>10:00 – 19:00</strong><br>Μάιος – Σεπτέμβριος</p>
+    </div>
+    <div class="info-block reveal" style="--d:.1s">
+      <span class="info-icon">📍</span>
+      <h3>Τοποθεσία</h3>
+      <p>Δυτική Αττική<br><strong>20′ από το κέντρο της Αθήνας</strong></p>
+    </div>
+    <div class="info-block reveal" style="--d:.2s">
+      <span class="info-icon">🚗</span>
+      <h3>Πρόσβαση</h3>
+      <p>Δωρεάν parking<br><strong>1.000+ θέσεις</strong></p>
+    </div>
+    <div class="info-block reveal" style="--d:.3s">
+      <span class="info-icon">🍔</span>
+      <h3>Φαγητό &amp; Ποτό</h3>
+      <p>Beach bar, εστιατόριο<br><strong>&amp; snack corners</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="cta-band">
+  <div class="container cta-inner reveal">
+    <h2>Έτοιμος για <em>βουτιά;</em></h2>
+    <p>Το καλοκαίρι δεν περιμένει. Κλείσε τη θέση σου σήμερα.</p>
+    <a href="#tickets" class="btn btn-light">Κλείσε Εισιτήρια <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <svg class="wave-divider wave-top wave-footer" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <path class="wave-a" d="M0,60 C240,110 480,10 720,55 C960,100 1200,20 1440,60 L1440,110 L0,110 Z"/>
+  </svg>
+  <div class="container footer-grid">
+    <div>
+      <a href="#top" class="logo footer-logo"><span class="logo-drop">💧</span><span class="logo-text">aqua<em>polis</em></span></a>
+      <p class="footer-tag">Το μεγαλύτερο water park της Αττικής.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="#attractions">Νεροτσουλήθρες</a>
+      <a href="#kids">Παιδικός Κόσμος</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#tickets">Εισιτήρια</a>
+    </nav>
+    <div class="footer-contact">
+      <p>info@aquapolis.gr</p>
+      <p>+30 210 000 0000</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">ⓕ</a>
+        <a href="#" aria-label="Instagram">◉</a>
+        <a href="#" aria-label="TikTok">♪</a>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 Aquapolis Athens — Redesign concept</p>
+</footer>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Κλείσιμο">✕</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
